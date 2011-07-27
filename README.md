@@ -16,4 +16,6 @@ or to grab it from GitHub:
 
 ## Usage
 
-Before your app is called, the middleware adds a "flash" key to the request that contains the current flash dict.  Then your app is called, and the session is updated to the new value of request["flash"].  Note that request["flash"] is actually a dict-like object whose values disappear after the first access.
+Just wrap your app with `pump_flash.wrap_flash`.
+
+Before your app is called, the middleware adds a `flash` key to the request that contains the current flash dict.  Then your app is called, and the session is updated to the new value of `request["flash"]`.  Note that `request["flash"]` is actually a dict-like object whose values disappear after the first access.
